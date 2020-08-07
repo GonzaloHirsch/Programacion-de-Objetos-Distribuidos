@@ -33,27 +33,31 @@ public class StreamCollectTest {
 
     @Test
     public void collect_with_consumer() {
+        // TODO SOLUTION: replaced expected with the value calculated by hand
         final double average = ages.collect(Averager::new, Averager::accept, Averager::combine).average();
-        assertEquals("what's  the average", new Double(0), average, 0.001);
+        assertEquals("what's  the average", 31, average, 0.001);
     }
 
     @Test
     public final void average_with_collector() {
-        final Double averege = ages.collect(Collectors.averagingInt(x -> x));
-        assertEquals("what's  the average", new Double(0), averege, 0.001);
+        // TODO SOLUTION: replaced expected with the value calculated by hand
+        final Double average = ages.collect(Collectors.averagingInt(x -> x));
+        assertEquals("what's  the average", 31, average, 0.001);
     }
 
     @Test
     public final void sum_with_collector() {
+        // TODO SOLUTION: replaced expected with the value calculated by hand
         final Integer sum = ages.collect(Collectors.summingInt(x -> x));
-        assertEquals("what's the sum", new Integer(0), sum);
+        assertEquals("what's the sum", Integer.valueOf(217), sum);
     }
 
     @Test
     public final void joining_with_collector() {
+        // TODO SOLUTION: replaced expected with the joined phrase
         final Stream<String> words = Stream.of("this", "is", "a", "phrase");
         final String phrase = words.collect(Collectors.joining(", "));
-        assertEquals("what's the phrase", "", phrase);
+        assertEquals("what's the phrase", "this, is, a, phrase", phrase);
     }
 
     @Test
