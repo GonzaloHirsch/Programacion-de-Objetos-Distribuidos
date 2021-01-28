@@ -47,7 +47,7 @@ public class CompletableFutureTest {
     public void test_completed_future() throws Exception {
         final String expectedValue = "Hi this would be the return of the task";
         final CompletableFuture<String> completedFuture = CompletableFuture.completedFuture(expectedValue);
-        assertEquals("what does are future return?", null, completedFuture.get());
+        assertEquals("what does are future return?", expectedValue, completedFuture.get());
     }
 
     @Test
@@ -55,14 +55,14 @@ public class CompletableFutureTest {
         final CompletableFuture<Void> runAsync = CompletableFuture
                 .runAsync(() -> logger.info("running async task"), service);
         sleepFor(1);
-        assertEquals("is the future done?", null, runAsync.isDone());
+        assertEquals("is the future done?", true, runAsync.isDone());
     }
 
     @Test
     public void test_supply_async() throws Exception {
         final CompletableFuture<String> completableFuture = CompletableFuture
                 .supplyAsync(runTaskThatLasts(1, "Final Result"), service);
-        assertEquals("what does are future return?", null, completableFuture.get());
+        assertEquals("what does are future return?", "Final Result", completableFuture.get());
     }
 
     @Test
@@ -74,11 +74,11 @@ public class CompletableFutureTest {
 
         acceptingTask.get(); // wait till is done
 
-        assertEquals("is the task done?", null, task.isDone());
-        assertEquals("is the acceptingTask done?", null, acceptingTask.isDone());
-        assertEquals("what does  task returns?", null, task.get());
-        assertEquals("how many elements on the list?", 0, results.size());
-        assertEquals("what's on the list", asList(null), results);
+        assertEquals("is the task done?", true, task.isDone());
+        assertEquals("is the acceptingTask done?", true, acceptingTask.isDone());
+        assertEquals("what does  task returns?", result, task.get());
+        assertEquals("how many elements on the list?", 1, results.size());
+        assertEquals("what's on the list", asList(result), results);
     }
 
     @Test
@@ -91,12 +91,12 @@ public class CompletableFutureTest {
 
         cleanUp.get(); // wait till is done
 
-        assertEquals("is the task done?", null, task.isDone());
-        assertEquals("is the acceptingTask done?", null, acceptingTask.isDone());
-        assertEquals("is the cleanUp done?", null, cleanUp.isDone());
-        assertEquals("what does  task returns?", null, task.get());
+        assertEquals("is the task done?", true, task.isDone());
+        assertEquals("is the acceptingTask done?", true, acceptingTask.isDone());
+        assertEquals("is the cleanUp done?", true, cleanUp.isDone());
+        assertEquals("what does  task returns?", result, task.get());
         assertEquals("how many elements on the list?", 0, results.size());
-        assertEquals("what's on the list", asList(null), results);
+        assertEquals("what's on the list", asList(), results);
 
     }
 
@@ -116,9 +116,9 @@ public class CompletableFutureTest {
         final CompletableFuture<Void> finisher = run1.runAfterBothAsync(run2,
                 () -> results.add(results.get(0) + "&" + results.get(1)), service);
         finisher.get(); // wait till done
-        assertEquals("is the task done?", null, finisher.isDone());
-        assertEquals("how many elements on the list?", 0, results.size());
-        assertEquals("what's on the list", asList(null), results);
+        assertEquals("is the task done?", true, finisher.isDone());
+        assertEquals("how many elements on the list?", 3, results.size());
+        assertEquals("what's on the list", asList("first task", "second task", "first task&second task"), results);
     }
 
     @Test
@@ -138,8 +138,8 @@ public class CompletableFutureTest {
                 () -> results.add(results.get(0).toUpperCase()), service);
 
         finisher.get(); // wait till done
-        assertEquals("is the finisher task done?", null, finisher.isDone());
-        assertEquals("what's on the list", asList(null), results);
+        assertEquals("is the finisher task done?", true, finisher.isDone());
+        assertEquals("what's on the list", asList("should be first", "should be first".toUpperCase()), results);
     }
 
     @Test
@@ -155,10 +155,10 @@ public class CompletableFutureTest {
 
         collector.get(); // wait till done
 
-        assertEquals("is the collectort task done?", null, collector.isDone());
-        assertEquals("is the callingCompletable task done?", null, callingCompletable.isDone());
-        assertEquals("is the nestedCompletable task done?", null, nestedCompletable.isDone());
-        assertEquals("what's on the list", asList(null), results);
+        assertEquals("is the collectort task done?", true, collector.isDone());
+        assertEquals("is the callingCompletable task done?", true, callingCompletable.isDone());
+        assertEquals("is the nestedCompletable task done?", false, nestedCompletable.isDone());
+        assertEquals("what's on the list", asList("calling"), results);
     }
 
     @Test
@@ -174,10 +174,10 @@ public class CompletableFutureTest {
 
         collector.get(); // wait till done
 
-        assertEquals("is the collectort task done?", null, collector.isDone());
-        assertEquals("is the callingCompletable task done?", null, callingCompletable.isDone());
-        assertEquals("is the nestedCompletable task done?", null, nestedCompletable.isDone());
-        assertEquals("what's on the list", asList(null), results);
+        assertEquals("is the collectort task done?", true, collector.isDone());
+        assertEquals("is the callingCompletable task done?", false, callingCompletable.isDone());
+        assertEquals("is the nestedCompletable task done?", true, nestedCompletable.isDone());
+        assertEquals("what's on the list", asList("nested"), results);
     }
 
     @Test
@@ -197,10 +197,10 @@ public class CompletableFutureTest {
                 acceptBothResults);
         bothTasks.get(); // wait till done
 
-        assertEquals("is the bothTasks task done?", null, bothTasks.isDone());
-        assertEquals("is the firstTask task done?", null, firstTask.isDone());
-        assertEquals("is the secondTask task done?", null, secondTask.isDone());
-        assertEquals("what's on the list", asList(null), results);
+        assertEquals("is the bothTasks task done?", true, bothTasks.isDone());
+        assertEquals("is the firstTask task done?", true, firstTask.isDone());
+        assertEquals("is the secondTask task done?", true, secondTask.isDone());
+        assertEquals("what's on the list", asList("first task", "second task"), results);
 
     }
 
@@ -211,7 +211,7 @@ public class CompletableFutureTest {
                 .supplyAsync(runTaskThatLasts(1, "change me"), service)
                     .thenApply(String::toUpperCase);
 
-        assertEquals("what does are future return?", null, task.get());
+        assertEquals("what does are future return?", "change me".toUpperCase(), task.get());
     }
 
     @Test
@@ -223,7 +223,7 @@ public class CompletableFutureTest {
         final CompletableFuture<String> combined = firstTask.thenCombineAsync(secondTask,
                 (f, s) -> f + " " + s, service);
 
-        assertEquals("what does are combined future return?", null, combined.get());
+        assertEquals("what does are combined future return?", "combine all task results", combined.get());
     }
 
     @Test
@@ -236,7 +236,7 @@ public class CompletableFutureTest {
         final CompletableFuture<String> combined = asyncComputedValue.thenCombine(knowValueToCombine,
                 calcResults);
 
-        assertEquals("what does are combined future return?", null, combined.get());
+        assertEquals("what does are combined future return?", "taking a calculated value then adding a known value", combined.get());
 
     }
 
@@ -258,7 +258,8 @@ public class CompletableFutureTest {
 
         final CompletableFuture<Integer> summedMultiples = getMultiples.thenComposeAsync(sumNumbers, service);
 
-        assertEquals("what does are summedMultiples future return?", new Integer(0), summedMultiples.get());
+        // TODO SOLUTION: La suma de los primeros 10 multiplos de 13 = 13 * (1 + ... + 10)
+        assertEquals("what does are summedMultiples future return?", new Integer(715), summedMultiples.get());
     }
 
     @Test
@@ -292,7 +293,7 @@ public class CompletableFutureTest {
         final CompletableFuture<String> finalStage = stage7.thenCombineAsync(stage8, (s1, s2) -> s1 + s2,
                 service);
 
-        assertEquals("what does are finalStage future return?", null, finalStage.get());
+        assertEquals("what does are finalStage future return?", "THE QUICK BROWN FOX JUMPED OVER the lazy dog", finalStage.get());
 
     }
 
@@ -305,8 +306,8 @@ public class CompletableFutureTest {
 
         cf.completeExceptionally(new IllegalArgumentException(exceptionMessgae));
 
-        assertEquals("does this future end in error", null, exceptionally.isCompletedExceptionally());
-        assertEquals("what does this future return", null, exceptionally.get());
+        assertEquals("does this future end in error", false, exceptionally.isCompletedExceptionally());
+        assertEquals("what does this future return", exceptionMessgae, exceptionally.get());
     }
 
     @Test
@@ -323,12 +324,12 @@ public class CompletableFutureTest {
         });
         cf.complete("eok");
 
-        assertEquals("does this future end in error", null, whenComplete.isCompletedExceptionally());
-        assertEquals("what does this future return?", null, whenComplete.get());
+        assertEquals("does this future end in error", false, whenComplete.isCompletedExceptionally());
+        assertEquals("what does this future return?", "eok", whenComplete.get());
 
     }
 
-    @Test
+    @Test(expected = ExecutionException.class)
     public final void when_complete_exceptionally() throws InterruptedException, ExecutionException {
         final CompletableFuture<String> cf = new CompletableFuture<>();
         final CompletableFuture<String> whenComplete = cf.whenComplete((r, e) -> {
@@ -342,8 +343,8 @@ public class CompletableFutureTest {
         });
         cf.completeExceptionally(new IllegalArgumentException("este future no termino bien"));
 
-        assertEquals("does this future end in error", null, whenComplete.isCompletedExceptionally());
-        assertEquals("what does this future return (or...)?", null, whenComplete.get());
+        assertEquals("does this future end in error", true, whenComplete.isCompletedExceptionally());
+        assertEquals("what does this future return (or...)?", "este future no termino bien", whenComplete.get());
     }
 
     private Supplier<String> runTaskThatLasts(final int numSeconds, final String taskResult) {

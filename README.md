@@ -1,6 +1,9 @@
-# Programacion-de-Objetos-Distribuidos
-Repository for exercises about Programación de Objetos Distribuidos @ ITBA
+# Welcome to Programación de Objetos Distribuidos
 
-Currently the max TP is TP1
+This is a repository for exercises and summaries about Programación de Objetos Distribuidos @ ITBA
 
-This repo is by Gonzalo Hirsch
+You can find the summaries [here](resumen/resumen.md).
+
+### Support or Contact
+
+Having trouble the website, want to make a suggestion, or point out an error? Send me an email @ <hirschgonzalo@gmail.com>
