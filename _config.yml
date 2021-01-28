@@ -6,4 +6,10 @@ relative_links:
 include:
   - /resumen/resumen.md
   - /resumen/parte-1.md
+  - /resumen/parte-2.md
+  - /resumen/parte-3.md
+  - /resumen/parte-4.md
+  - /resumen/parte-5.md
+  - /resumen/parte-6.md
+  - /resumen/parte-7.md
 theme: jekyll-theme-minimal
