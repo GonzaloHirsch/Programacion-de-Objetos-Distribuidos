@@ -210,6 +210,7 @@ Viene con *factory methods*:
  - **of** --> a partir de parámetros
  - **from** --> a partir de convertir los parámetros
  - **parse** --> a partir de un string
+
 ```java
 //Current Date
 LocalDate today = LocalDate.now();
