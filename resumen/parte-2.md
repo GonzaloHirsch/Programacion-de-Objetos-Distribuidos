@@ -79,7 +79,7 @@ También tiene métodos de instancia de utilidad:
 ### Lifecylce de un Thread
 
 Durante el ciclo de vida, puede tener estos estados:
-![Thread Lifecycle](thread_lifecylce.jpg "Thread Lifecycle")
+![Thread Lifecycle](thread_lifecycle.jpg "Thread Lifecycle")
 
 ### Callable
 
