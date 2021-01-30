@@ -38,7 +38,7 @@ Recibe un `(key, value)` y emite 0, 1 o más pares `(key, value)`.
 
 Toma los valores emitidos por el mapper y los junta según la clave, para luego enviarlos a cada reducer.
 
-#### Reduce
+#### Reduce
 
 Se usa un reducer por cada clave emitida, y recibe todos los valores para la clave emitida por el/los mapper/s. Procesa los valores y emite 1 o más valores finales para la clave.
 
