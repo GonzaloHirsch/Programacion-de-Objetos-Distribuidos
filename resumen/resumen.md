@@ -105,6 +105,23 @@
                 - [Conceptos](#conceptos)
                 - [Streams](#streams)
 7. [NoSQL](parte-7.md#nosql)
+    - [Teorema CAP](#teorema-cap)
+    - [Key-Value Store](#key-value-store)
+        * [Redis](#redis)
+    - [Columnar Store](#columnar-store)
+        * [Apache HBase](#apache-hbase)
+            + [Modelo de Datos](#modelo-de-datos)
+            + [Componentes](#componentes)
+            + [Read y Delete](#read-y-delete)
+        * [Apache Cassandra](#apache-cassandra)
+            + [Gossip Protocol](#gossip-protocol)
+            + [Modelo de Datos](#modelo-de-datos-1)
+            + [Primary Keys](#primary-keys)
+    - [Document Oriented Store](#document-oriented-store)
+        * [MongoDB](#mongodb)
+            + [Modelo de Datos](#modelo-de-datos)
+    - [Graph Store](#graph-store)
+        * [Elastic](#elastic)
 
 ## How to Contribute
 
