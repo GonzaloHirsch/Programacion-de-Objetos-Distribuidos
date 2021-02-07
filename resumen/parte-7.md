@@ -28,7 +28,7 @@ El teorema indica que no se pueden los 3, sinó que se elijen 2. Como son sistem
 
 Base de datos simple que usa un vector para guardar pares clave-valor. La *clave* generalmente es un string, y el *valor* puede ser cualquier cosa.
 
-No hacen falta índices, y la respuesta no se puede controlar porque no hay esquema para lso valores.
+No hacen falta índices, y la respuesta no se puede controlar porque no hay esquema para los valores.
 
 No suelen tener query language más que unas operaciones simples para guardar, borrar y recuperar. Son rápidas para escritura y lectura, además de fáciles de usar.
 
@@ -43,6 +43,7 @@ No es recomendable como store permanente, y no puede guardar más información d
 Base de datos optimizada para leer columnas, sirve más que nada para hacer queries analíticas. Reducen accesos de IO ya que no hace falta hacer un full-scan. Son horizontalmente escalables con hardware barato.
 
 Teniendo un ejemplo con 3 filas y 3 columnas:
+
 |A   	|B   	|C   	|
 |---	|---	|---	|
 |A1   	|B1   	|C1   	|
@@ -50,10 +51,12 @@ Teniendo un ejemplo con 3 filas y 3 columnas:
 |A3   	|B3  	|C3   	|
 
 En una base por filas se guardan conceptualmente como:
+
 |A1   	|B1   	|C1   	|A2   	|B2   	|C2   	|A3   	|B3   	|C3   	|
 |---	|---	|---	|---	|---	|---	|---	|---	|---	|
 
 En una base por columnas se guardan como:
+
 |A1   	|A2   	|A3   	|B1   	|B2   	|B3   	|C1   	|C2   	|C3   	|
 |---	|---	|---	|---	|---	|---	|---	|---	|---	|
 

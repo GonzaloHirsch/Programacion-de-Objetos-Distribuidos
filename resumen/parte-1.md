@@ -32,7 +32,7 @@ Algunos ejemplos de interfaces funcionales son:
  - `UnaryOperator<T>` --> Function from T to T
  - `BinaryOperator<T>` --> Function from (T,T) to T
 
-Estas interfaces pueden tener métodos **estáticos** o **default** que sirve como utility methods.
+Estas interfaces pueden tener métodos **estáticos** o **default** que sirven como utility methods.
 
 ## Default Methods
 
@@ -200,7 +200,7 @@ Los **collectors** reciben los siguiente, aunque hay algunos ya definidos:
  - `Function<A, R> finisher` --> una función para aplicar sobre el resultado final (típicamente Identidad)
  - `Characteristics... characteristics`--> valores que permiten optimizar las transformaciones.
 
-## Java Time
+## Java Time
 
 La nueva API de **Java Time** cumple con los siguientes principios:
  - *Clara* --> métodos bien definidos y comportamiento esperable

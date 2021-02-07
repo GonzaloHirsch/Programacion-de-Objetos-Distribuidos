@@ -39,6 +39,8 @@ Tienen diferentes acciones que se pueden hacer, como:
 - *Dice* --> Fijar más de una dimensión
 - *Pivot* --> Rotar la selección de dimensiones
 
+![OLAP](olap.png "OLAP")
+
 Hay que poder llevar los datos desde el RDBMS a la OLAP, para eso se usan operaciones de ETL, **Obtención/Extracción** (E), **Transformación** (T), y **Carga** (L). Estos procesos se hacen en forma batch periódicamente, toman mucho tiempo en procesar y las consultas son bastante rígidas.
 
 ## Big Data
@@ -66,7 +68,7 @@ Busca resolver el guardado de información que no entra toda en 1 solo nodo.
 
 ### Particionado
 
-Lo más conveniente es dividir la información entre los diferentes nodos. Si la partición es buena algunas *ventajas* son que , permite realizar escrituras más rápidas y eficientes, y acelerar las lecturas. Aunque sigue teniendo ciertas *desventajas*, como la coordinación del cluster y que los datos pueden quedar mal particionados si se utiliza una técnica incorrecta.
+Lo más conveniente es dividir la información entre los diferentes nodos. Si la partición es buena algunas *ventajas* son que, permite realizar escrituras más rápidas y eficientes, y acelerar las lecturas. Aunque sigue teniendo ciertas *desventajas*, como la coordinación del cluster y que los datos pueden quedar mal particionados si se utiliza una técnica incorrecta.
 
 ### Replicación
 

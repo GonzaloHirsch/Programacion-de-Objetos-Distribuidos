@@ -21,7 +21,7 @@ Aprovecha a los *threads* y los *procesadores multicore*. El algoritmo identific
 
 Un proceso puede tener múltiples threads corriendo, que son subunidades de ejecución.
 
-Los *Threads* comparten memoria y recursos, y pueden comunicarse entre los diferentes threads, mientas que los *Procesos* tiene que usar IPC.
+Los *Threads* comparten memoria y recursos, y pueden comunicarse entre los diferentes threads, mientas que los *Procesos* tienen que usar IPC.
 
 Es mucho más fácil crear y hacer context switches en un *thread*, y requiere menos recursos.
 
@@ -220,9 +220,9 @@ Se puede usar `synchronized` para métodos enteros también.
 Existen dentro del paquete `java.util.concurrent.locks`, y tienen semánticas más complejas que `synchronized`. Hay distintos tipos:
 - **Lock** --> Interfaz básica de un Lock.
 - **ReadWriteLock** --> Interfaz que mantiene dos locks asociados, uno para lectura y otro para escritura.
-- **ReentrantLock**: Lock re-entrante similar a synchronized pero que permite extender su funcionalidad
-- **ReentrantReadWriteLock**: Combinación entre read-write y reentrant.
-- **StampedLock**: Lock más complejo con 3 tipos de operaciones (read, write, readOptimistic)
+- **ReentrantLock** --> Lock re-entrante similar a synchronized pero que permite extender su funcionalidad
+- **ReentrantReadWriteLock** --> Combinación entre read-write y reentrant.
+- **StampedLock** --> Lock más complejo con 3 tipos de operaciones (read, write, readOptimistic)
 
 *Los unlocks deberían ir en un finally.*
 
