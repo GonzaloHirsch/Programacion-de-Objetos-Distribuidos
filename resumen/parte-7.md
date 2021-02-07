@@ -54,11 +54,13 @@ En una base por filas se guardan conceptualmente como:
 
 |A1   	|B1   	|C1   	|A2   	|B2   	|C2   	|A3   	|B3   	|C3   	|
 |---	|---	|---	|---	|---	|---	|---	|---	|---	|
+|   	|   	|   	|   	|   	|   	|   	|   	|   	|
 
 En una base por columnas se guardan como:
 
 |A1   	|A2   	|A3   	|B1   	|B2   	|B3   	|C1   	|C2   	|C3   	|
 |---	|---	|---	|---	|---	|---	|---	|---	|---	|
+|   	|   	|   	|   	|   	|   	|   	|   	|   	|
 
 Y probablemente cada columna se guarda/escribe en un archivo separado.
 
