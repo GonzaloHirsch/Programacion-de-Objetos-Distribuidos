@@ -134,6 +134,10 @@ Las **Primary Keys** tienen 2 partes (ambas pueden ser compuestas):
 - *Partition Key* --> Define quién es el nodo dueño de la partición y quienes serán las réplicas, sirve para ver por igualdad
 - *Clustering Column* --> No son necesarias, es un segundo nivel de direccionamiento que sirve para ver por rangos
 
+#### Filtering
+
+Cassandra no tiene soporte de JOIN, LIKE, Subqueries y Aggregations, los campos del WHERE son solo de Primary Keys (a menos que se especifique ALLOW FILTERING). Esto se da por como se indexa la información en el file system de cada nodo (según la estructura de la Primary Key), y genera que sea "1 tabla por query".
+
 ## Document Oriented Store
 
 Es un Key-Value store donde el valor es un *documento* que no tiene esquema, y que a diferencia de key-value store, se pueden filtrar los documentos. Sirven para información semi-estructurada.

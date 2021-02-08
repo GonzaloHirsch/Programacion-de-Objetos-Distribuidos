@@ -113,6 +113,8 @@ Hay 3 posibles casos
 
 Para que un objeto sea serializable, debe implementar la interfaz `Serializable`, y todos sus atributos no primitivos deberían implementar `Serializable` también. Esta interfaz no tiene métodos, es simplemente una marca de que puede ser serializable.
 
+Se puede agregar un `serialVersionUID` que indica que versión del objeto se está utilizando. Sirve para versionar las versiones del cliente/servidor para ver que matcheen los números, si no matchea falla.
+
 ### Activation
 
 Los objetos remotos deben quedar activos de manera permanente, que genera que se consuman recursos, si se cae se pierde el estado y necesita constante monitoreo.
