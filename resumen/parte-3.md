@@ -115,6 +115,14 @@ Para que un objeto sea serializable, debe implementar la interfaz `Serializable`
 
 Se puede agregar un `serialVersionUID` que indica que versión del objeto se está utilizando. Sirve para versionar las versiones del cliente/servidor para ver que matcheen los números, si no matchea falla.
 
+### Semánticas
+
+Hay diferentes semánticas que se pueden usar:
+- **Exactly once** --> Cliente y servidor colaboran para que el mensaje se ejecute exactamente una vez
+- **Maybe** --> El cliente envía el mensaje y se despreocupa si llega o no
+- **At least once** --> Cliente envía envía mensaje y espera por la respuesta del servidor indicando si se ejecutó. Si pasa tiempo vuelve a intentar. Asegura que se ejecuta pero puede ser que más de una vez
+- **At most once** --> Servidor se encarga de que el mensaje no se vuelva a ejecutar. No garantiza que el mensaje le llegue por lo que puede ejecutarse 0 o 1 veces
+
 ### Activation
 
 Los objetos remotos deben quedar activos de manera permanente, que genera que se consuman recursos, si se cae se pierde el estado y necesita constante monitoreo.

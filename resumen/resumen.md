@@ -47,6 +47,7 @@
         * [Cliente Remoto](parte-3.md#cliente-remoto)
         * [Pasaje de Parametros](parte-3.md#pasaje-de-parametros)
         * [Serializacion y Marshalizacion](parte-3.md#serializacion-y-marshalizacion)
+        * [Semánticas](parte-3.md#semánticas)
         * [Activation](parte-3.md#activation)
 4. [Sistemas Distribuidos](parte-4.md#sistemas-distribuidos)
     - [RDBMS](parte-4.md#rdbms)
