@@ -3,6 +3,8 @@ plugins:
 relative_links:
   enabled: true
   collections: true
+url: "https://pod.gonzalohirsch.com"
+baseurl: "/" 
 include:
   - /resumen/resumen.md
   - /resumen/parte-1.md
