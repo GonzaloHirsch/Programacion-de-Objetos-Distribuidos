@@ -1,4 +1,11 @@
-# Procesamiento Distribuido
+---
+layout: default
+title:  "Procesamiento Distribuido (ejemplos)"
+description: "Introducción al concepto de procesamiento distribuido, ejemplos de arquitectura para ilustrar el funcionamiento de los sistemas de procesamiento distribudio."
+active: true
+---
+
+## Procesamiento Distribuido
 [Go to Index](resumen.md)
 
 ## Hazelcast MapReduce
