@@ -1,4 +1,11 @@
-# Sistemas Distribuidos
+---
+layout: default
+title:  "Sistemas Distribuidos (ejemplos)"
+description: "Introducción al concepto de un sistema distribuido y algunos ejemplos de los mismos en entornos de producción. Se mencionan los principales usos de estos sistemas."
+active: true
+---
+
+## Sistemas Distribuidos
 [Go to Index](resumen.md)
 
 Hay muchos diferentes tipos de sistemas distribuidos.
