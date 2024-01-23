@@ -1,4 +1,11 @@
-# Concurrencia
+---
+layout: default
+title:  "Concurrencia (programas, procesos)"
+description: "Introducción al concepto de concurrencia y paralelismo. Diferencias entre programa y proceso. Threads y procesos en Java 8 y su manejo en detalle."
+active: true
+---
+
+## Concurrencia
 [Go to Index](resumen.md)
 
 ## Programa vs Proceso
