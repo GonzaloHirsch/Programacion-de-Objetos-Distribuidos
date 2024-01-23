@@ -1,4 +1,11 @@
-# Resumen Final de POD
+---
+layout: default
+title:  "Resumen Final de POD"
+description: "Resumen final de Programación de Objetos Distribuidos. Este es el índice de todo el resumen, listando los contenidos de todas las páginas."
+active: true
+---
+
+## Índice
 
 1. [Java 8](parte-1.md#java-8)
     - [Try With Resources](parte-1.md#try-with-resources)
