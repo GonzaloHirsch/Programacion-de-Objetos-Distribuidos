@@ -5,6 +5,7 @@ relative_links:
   collections: true
 url: "https://pod.gonzalohirsch.com"
 baseurl: "/" 
+title: Resumen de POD
 include:
   - /resumen/resumen.md
   - /resumen/parte-1.md
