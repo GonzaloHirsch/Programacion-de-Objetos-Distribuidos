@@ -1,4 +1,11 @@
-# Java 8
+---
+layout: default
+title:  "Java 8 (funcional, optional, etc)"
+description: "Introducción a Java 8 y el esquema de programación funcional a través de las interfaces funcionales que Java 8 ofrece. Además incluye otras mejoras."
+active: true
+---
+
+## Java 8
 [Go to Index](resumen.md)
 
 ## Try With Resources
