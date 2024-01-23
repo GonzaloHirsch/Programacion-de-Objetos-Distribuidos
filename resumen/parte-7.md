@@ -1,4 +1,11 @@
-# NoSQL
+---
+layout: default
+title:  "NoSQL, Bases de Datos Distribuidas"
+description: "Introducción al concepto de NoSQL, bases de datos distribuidas y cual es el teorema CAP que rige los tipos de bases de datos que existen. Ejemplos de cada tipo."
+active: true
+---
+
+## NoSQL
 [Go to Index](resumen.md)
 
 Los sistemas NoSQL cumplen ciertas características:
