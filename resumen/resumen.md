@@ -3,6 +3,10 @@ layout: default
 title:  "Índice del resumen, página principal"
 description: "Resumen final de Programación de Objetos Distribuidos. Este es el índice de todo el resumen, listando los contenidos de todas las páginas."
 active: true
+image:
+  path: /meta.png
+  height: 640
+  width: 1280
 ---
 
 ## Índice
