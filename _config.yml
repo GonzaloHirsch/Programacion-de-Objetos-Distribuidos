@@ -15,4 +15,5 @@ include:
   - /resumen/parte-5.md
   - /resumen/parte-6.md
   - /resumen/parte-7.md
+  - /index.md
 theme: jekyll-theme-minimal
