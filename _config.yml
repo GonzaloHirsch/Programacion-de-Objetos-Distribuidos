@@ -20,6 +20,11 @@ include:
   - /index.md
 theme: jekyll-theme-minimal
 
+image:
+  path: /meta.png
+  height: 640
+  width: 1280
+
 twitter:
   'twitter:username': '@GonzaloHirsch'
   username: '@GonzaloHirsch'
