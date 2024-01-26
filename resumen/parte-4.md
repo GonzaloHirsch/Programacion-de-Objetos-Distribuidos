@@ -1,7 +1,7 @@
 ---
 layout: default
 title:  "Sistemas Distribuidos (ejemplos)"
-description: "Introducción al concepto de un sistema distribuido y algunos ejemplos de los mismos en entornos de producción. Se mencionan los principales usos de estos sistemas."
+description: "Introducción al concepto de sistema distribuido y algunos ejemplos de los mismos en entornos de producción. Se mencionan los principales usos de estos sistemas."
 active: true
 ---
 
