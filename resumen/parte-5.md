@@ -3,6 +3,10 @@ layout: default
 title:  "Store Distribuido (ejemplos)"
 description: "Introducción al concepto de un store distribuido, incluyendo ejemplos de los mismos y cuál es la arquitectura que dichos sistemas usan para funcionar."
 active: true
+image:
+  path: /meta.png
+  height: 640
+  width: 1280
 ---
 
 ## Store Distribuido
