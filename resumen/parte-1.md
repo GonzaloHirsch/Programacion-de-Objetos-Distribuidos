@@ -3,6 +3,10 @@ layout: default
 title:  "Java 8 (funcional, optional, etc)"
 description: "Introducción a Java 8 y el esquema de programación funcional a través de las interfaces funcionales que Java 8 ofrece. Además incluye otras mejoras."
 active: true
+image:
+  path: /meta.png
+  height: 640
+  width: 1280
 ---
 
 ## Java 8
