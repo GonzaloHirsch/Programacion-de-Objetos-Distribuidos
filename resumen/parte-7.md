@@ -3,6 +3,10 @@ layout: default
 title:  "NoSQL, Bases de Datos Distribuidas"
 description: "Introducción al concepto de NoSQL, bases de datos distribuidas y cual es el teorema CAP que rige los tipos de bases de datos que existen. Ejemplos de cada tipo."
 active: true
+image:
+  path: /meta.png
+  height: 640
+  width: 1280
 ---
 
 ## NoSQL
