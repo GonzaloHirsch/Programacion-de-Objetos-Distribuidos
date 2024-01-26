@@ -22,6 +22,12 @@ theme: jekyll-theme-minimal
 
 image: /meta.png
 
+defaults:
+  - scope:
+      path: ""
+    values:
+      image: /meta.png
+
 twitter:
   'twitter:username': '@GonzaloHirsch'
   username: '@GonzaloHirsch'
