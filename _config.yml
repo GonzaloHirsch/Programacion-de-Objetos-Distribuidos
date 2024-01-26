@@ -1,5 +1,7 @@
 plugins:
   - jekyll-relative-links
+  - jekyll-seo-tag
+  
 relative_links:
   enabled: true
   collections: true
@@ -17,3 +19,11 @@ include:
   - /resumen/parte-7.md
   - /index.md
 theme: jekyll-theme-minimal
+
+twitter:
+  'twitter:username': '@GonzaloHirsch'
+  username: '@GonzaloHirsch'
+  site: '@GonzaloHirsch'
+  card: summary
+
+google_analytics: G-RH9ZR9M5FC
