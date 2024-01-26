@@ -1,5 +1,4 @@
 ---
-layout: default
 title:  "Programación de Objetos Distribuidos"
 description: "A repository of practical examples and knowledge related to Programación de Objetos Distribuidos (ITBA), with the full coursework and a course summary."
 active: true
