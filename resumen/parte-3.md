@@ -3,6 +3,10 @@ layout: default
 title:  "Remote Method Invocation (RMI)"
 description: "Introducción al concepto de Remote Method Invocation (RMI), su diferencia con RPC y como se puede utilizar en sistemas distribuidos implementados en Java 8."
 active: true
+image:
+  path: /meta.png
+  height: 640
+  width: 1280
 ---
 
 ## RMI
