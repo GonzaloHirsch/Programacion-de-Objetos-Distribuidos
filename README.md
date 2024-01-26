@@ -5,7 +5,7 @@ description: "A repository of practical examples and knowledge related to Progra
 active: true
 ---
 
-# Welcome to Programación de Objetos Distribuidos
+## Welcome to Programación de Objetos Distribuidos
 
 This is a repository for exercises and summaries about Programación de Objetos Distribuidos @ ITBA
 
